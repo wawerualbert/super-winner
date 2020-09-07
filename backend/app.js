@@ -12,7 +12,7 @@ app.use((req, res, next) => {
     next();
 });
 
-mongoose.connect('mongodb+srv://mongodb:AK8h9DXyXbzk7QhX@cluster0-hdl9n.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv:mongodb:ALUkDkf44DOzBinM@cluster0.hdl9n.mongodb.net/<dbname>?retryWrites=true&w=majority', {useNewUrlParser: true})
     .then(() => {
         console.log('Connected to MongoDB Atlas');
     })
