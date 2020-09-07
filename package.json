@@ -1,0 +1,23 @@
+{
+  "name": "heroku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd front && npm start",
+    "api": "cd backend && nodemon app.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run front\"",
+    "heroku-postbuild": "cd front && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wawerualbert/super-winner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wawerualbert/super-winner/issues"
+  },
+  "homepage": "https://github.com/wawerualbert/super-winner#readme"
+}
