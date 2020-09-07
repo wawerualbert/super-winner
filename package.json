@@ -11,8 +11,9 @@
     "frontend": "npm --prefix ./front install",
     "api": "npm --prefix ./backend node app.js",
     "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run front\"",
-    "heroku-postbuild": "npm --prefix ./front install && run build"
+    "heroku-postbuild": "ng build --aot --prod"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wawerualbert/super-winner.git"
